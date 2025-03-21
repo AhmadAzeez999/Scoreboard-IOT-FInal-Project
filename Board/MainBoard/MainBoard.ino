@@ -29,29 +29,32 @@ void setup()
     Serial.begin(9600);
     Display::getInstance().setup(4);
     remote.setupRemote();
+
+    
 }
 
 void loop()
 {
-  if (Serial.available())
-  {
-    // Extracting size
-    String input = Serial.readStringUntil('\n');  // Read until newline
-    parseInput(input);
+  // if (Serial.available())
+  // {
+  //   // Extracting size
+  //   String input = Serial.readStringUntil('\n');  // Read until newline
+  //   parseInput(input);
     
-    // Debug print
-    Serial.println("Parsed values:");
-    Serial.println("Size: " + String(messageSize));
-    Serial.println("Command: " + command);
-    Serial.println("Display type: " + displayType);
-    Serial.println("Message: " + message);
+  //   // Debug print
+  //   Serial.println("Parsed values:");
+  //   Serial.println("Size: " + String(messageSize));
+  //   Serial.println("Command: " + command);
+  //   Serial.println("Display type: " + displayType);
+  //   Serial.println("Message: " + message);
 
-    Serial.println(message.c_str());
+  //   Serial.println(message.c_str());
    
 
-    Display::getInstance().displayText(message.c_str(), "", "STATIC", "", true);
-  }
-   remote.useRemote();
+  //   Display::getInstance().displayText(message.c_str(), "", "STATIC", "", true);
+  // }
+
+  // remote.useRemote();
 
   // static bool timerActive = false;  // Track if timer has started
 

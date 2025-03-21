@@ -308,7 +308,7 @@ void Display::changeColour(const int pattern)
   if (pattern == 0)
   {
     // Display::getInstance().displayText("Green", "Purple", "STATIC", "", false);
-    currentColourHex = 0x00FF00; // Green (red is 0xFF0000)
+    currentColourHex = 0x00FF00;
   }
   else if (pattern == 1)
   {
@@ -323,6 +323,6 @@ void Display::changeColour(const int pattern)
   else if (pattern == 3)
   {
     // Display::getInstance().displayText("Green", "Blue", "STATIC", "", false);
-    currentColourHex = 0x00FF00; // Green
+    currentColourHex = 0xFF0000; // Red
   }
 }
